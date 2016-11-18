@@ -4,8 +4,26 @@
   Template: altitude-lite
 */
 
+#main_navigation_container {
+  border-radius: 4px;
+  opacity: 0.5;
+  transition: opacity 300ms ease-in-out;
+}
+
+#main_navigation_container:hover {
+  opacity: 1.0;
+}
+
 #main_navigation_container #site_navigation {
   text-align: right;
   position: inherit;
   float: right;
+}
+
+#main_navigation_container #site_navigation .menu > li, #main_navigation_container #site_navigation .menu > ul li {
+  margin-left: 35px;
+}
+
+#main_navigation_container #site_navigation .menu li a {
+  font-size: 24pt;
 }
