@@ -3,3 +3,9 @@
   Author: Chris Perko
   Template: altitude-lite
 */
+
+#main_navigation_container #site_navigation {
+  text-align: right;
+  position: inherit;
+  float: right;
+}
