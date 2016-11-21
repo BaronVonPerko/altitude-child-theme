@@ -37,7 +37,7 @@ function latte_child_settings() {
  * Setup the Child Theme administration settings page
  */
 function latte_child_get_admin_settings() {
-  require_once( get_stylesheet_directory() . '/inc/templates/latte-child-admin-settings.php' );
+  require_once( get_stylesheet_directory() . '/inc/templates/admin-settings.php' );
 }
 function latte_child_admin_settings() {
   add_menu_page( 'Latte Child Options', 'Latte Child', 'manage_options', 'latte-child', 'latte_child_get_admin_settings', null, 99 );

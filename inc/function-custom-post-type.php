@@ -13,8 +13,8 @@
  */
 $enablePortfolio = get_option( 'latte-child-enable-portfolio' );
 if( @$enablePortfolio == 1 ) {
+  add_action( 'init', 'create_portfolio_item_post_type' );
 }
-add_action( 'init', 'create_portfolio_item_post_type' );
 
 function create_portfolio_item_post_type() {
   $labels = array(

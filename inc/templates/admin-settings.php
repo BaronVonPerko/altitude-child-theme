@@ -1,5 +1,10 @@
 <?php settings_errors(); ?>
 
+<p>
+  Use this <strong>shortcode</strong> to activate the portfolio inside a Page or Post
+</p>
+<code>[display_portfolio]</code>
+
 <form method="post" action="options.php">
 
   <?php settings_fields( 'latte-child-options-group' ); ?>
