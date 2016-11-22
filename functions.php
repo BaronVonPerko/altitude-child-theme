@@ -9,6 +9,7 @@
 
 require get_stylesheet_directory() . '/inc/function-admin.php';
 require get_stylesheet_directory() . '/inc/function-custom-post-type.php';
+require get_stylesheet_directory() . '/inc/function-enqueue.php';
 require get_stylesheet_directory() . '/inc/shortcodes.php';
 
 

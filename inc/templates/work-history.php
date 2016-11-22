@@ -1,4 +1,4 @@
-<div class="xs-col-12">
+<div class="xs-col-12 work-history">
 	<div class="page-content">
 
 		<?php $query = new WP_Query( array( 'post_type' => 'work-history' ) ); ?>
