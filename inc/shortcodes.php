@@ -10,7 +10,7 @@
 
 
 // Display Portfolio Shortcode
-function latte_child_display_portfolio( $atts, $content = null ) {
+function altitude_child_display_portfolio( $atts, $content = null ) {
   $atts = shortcode_atts (
     array(),
     $atts,
@@ -19,6 +19,22 @@ function latte_child_display_portfolio( $atts, $content = null ) {
 
   ob_start();
   include 'templates/portfolio.php';
-  return ob_get_clean(); 
+  return ob_get_clean();
 }
-add_shortcode( 'display_portfolio', 'latte_child_display_portfolio' );
+add_shortcode( 'display_portfolio', 'altitude_child_display_portfolio' );
+
+
+
+// Display Work Items Shortcode
+function altitude_child_display_work_items( $atts, $content = null ) {
+  $atts = shortcode_atts (
+    array(),
+    $atts,
+    'display_work_items'
+  );
+
+  ob_start();
+  include 'templates/work-history.php';
+  return ob_get_clean();
+}
+add_shortcode( 'display_work_items', 'altitude_child_display_work_items' );

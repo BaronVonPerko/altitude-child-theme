@@ -13,10 +13,12 @@
  */
 function register_altitude_child_settings() {
   register_setting( 'altitude-child-options-group', 'altitude-child-enable-portfolio' );
+  register_setting( 'altitude-child-options-group', 'altitude-child-enable-work-history' );
 
   add_settings_section( 'altitude-child-settings', 'Altitude Child Settings', 'altitude_child_settings', 'altitude-child' );
 
   add_settings_field( 'altitude-child-enable-portfolio', 'Portfolio Page Enabled', 'altitude_child_enable_portfolio', 'altitude-child', 'altitude-child-settings' );
+  add_settings_field( 'altitude-child-enable-work-history', 'Work History Page Enabled', 'altitude_child_enable_work_history', 'altitude-child', 'altitude-child-settings' );
 }
 add_action( 'admin_init', 'register_altitude_child_settings' );
 
@@ -24,6 +26,28 @@ function altitude_child_enable_portfolio() {
   $enablePortfolio = get_option( 'altitude-child-enable-portfolio' );
   $checked = @$enablePortfolio == 1 ? 'checked' : '';
   echo '<input type="checkbox" value="1" name="altitude-child-enable-portfolio" '.$checked.' />';
+  if( $checked ) {
+    ?>
+    <p>
+      Use this <strong>shortcode</strong> to activate the portfolio inside a Page or Post
+    </p>
+    <code>[display_portfolio]</code>
+    <?php
+  }
+ }
+
+function altitude_child_enable_work_history() {
+  $enableWorkHistory = get_option( 'altitude-child-enable-work-history' );
+  $checked = @$enableWorkHistory == 1 ? 'checked' : '';
+  echo '<input type="checkbox" value="1" name="altitude-child-enable-work-history" '.$checked.' />';
+  if( $checked ) {
+    ?>
+      <p>
+        Use this <strong>shortcode</strong> to activate the work history inside a Page or Post
+      </p>
+      <code>[display_work_items]</code>
+    <?php
+  }
 }
 
 function altitude_child_settings() {
