@@ -11,7 +11,7 @@
 /*
  * Portfolio Items
  */
-$enablePortfolio = get_option( 'latte-child-enable-portfolio' );
+$enablePortfolio = get_option( 'altitude-child-enable-portfolio' );
 if( @$enablePortfolio == 1 ) {
   add_action( 'init', 'create_portfolio_item_post_type' );
 }

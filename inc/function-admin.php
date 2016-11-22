@@ -9,24 +9,24 @@
 
 
 /*
- * Register Latte Child Admin Settings
+ * Register Altitude Child Admin Settings
  */
-function register_latte_child_settings() {
-  register_setting( 'latte-child-options-group', 'latte-child-enable-portfolio' );
+function register_altitude_child_settings() {
+  register_setting( 'altitude-child-options-group', 'altitude-child-enable-portfolio' );
 
-  add_settings_section( 'latte-child-settings', 'Latte Child Settings', 'latte_child_settings', 'latte-child' );
+  add_settings_section( 'altitude-child-settings', 'Altitude Child Settings', 'altitude_child_settings', 'altitude-child' );
 
-  add_settings_field( 'latte-child-enable-portfolio', 'Portfolio Page Enabled', 'latte_child_enable_portfolio', 'latte-child', 'latte-child-settings' );
+  add_settings_field( 'altitude-child-enable-portfolio', 'Portfolio Page Enabled', 'altitude_child_enable_portfolio', 'altitude-child', 'altitude-child-settings' );
 }
-add_action( 'admin_init', 'register_latte_child_settings' );
+add_action( 'admin_init', 'register_altitude_child_settings' );
 
-function latte_child_enable_portfolio() {
-  $enablePortfolio = get_option( 'latte-child-enable-portfolio' );
+function altitude_child_enable_portfolio() {
+  $enablePortfolio = get_option( 'altitude-child-enable-portfolio' );
   $checked = @$enablePortfolio == 1 ? 'checked' : '';
-  echo '<input type="checkbox" value="1" name="latte-child-enable-portfolio" '.$checked.' />';
+  echo '<input type="checkbox" value="1" name="altitude-child-enable-portfolio" '.$checked.' />';
 }
 
-function latte_child_settings() {
+function altitude_child_settings() {
   echo 'Customize Theme Experience';
 }
 
@@ -36,10 +36,10 @@ function latte_child_settings() {
 /*
  * Setup the Child Theme administration settings page
  */
-function latte_child_get_admin_settings() {
+function altitude_child_get_admin_settings() {
   require_once( get_stylesheet_directory() . '/inc/templates/admin-settings.php' );
 }
-function latte_child_admin_settings() {
-  add_menu_page( 'Latte Child Options', 'Latte Child', 'manage_options', 'latte-child', 'latte_child_get_admin_settings', null, 99 );
+function altitude_child_admin_settings() {
+  add_menu_page( 'altitude-child Options', 'Altitude Child Settings', 'manage_options', 'altitude-child', 'altitude_child_get_admin_settings', null, 99 );
 }
-add_action( 'admin_menu', 'latte_child_admin_settings' );
+add_action( 'admin_menu', 'altitude_child_admin_settings' );

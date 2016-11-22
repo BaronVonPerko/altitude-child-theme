@@ -2,7 +2,7 @@
 /*
  * shortcodes.php
  *
- * Shortcodes for Latte-Child theme.
+ * Shortcodes for altitude-child theme.
  */
 
 
