@@ -9,4 +9,4 @@
 
 		<?php endwhile; // end of the loop. ?>
 	</div>
-</div><!-- col -->
+</div>

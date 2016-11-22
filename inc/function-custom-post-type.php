@@ -20,8 +20,8 @@ function create_portfolio_item_post_type() {
   $labels = array(
     'name'            => __( 'Portfolio Items' ),
     'singular_name'   => __( 'Portfolio Item' ),
-    'menu_name'       => __( 'Portfolio Items' ),
-    'name_admin_bar'  => __( 'Portfolio Item' )
+    'menu_name'       => __( 'Portfolio' ),
+    'name_admin_bar'  => __( 'Portfolio' )
   );
 
   $args = array(

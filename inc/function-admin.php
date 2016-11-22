@@ -27,7 +27,7 @@ function latte_child_enable_portfolio() {
 }
 
 function latte_child_settings() {
-  echo 'Customize Latte Child Experience';
+  echo 'Customize Theme Experience';
 }
 
 
