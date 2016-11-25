@@ -23,7 +23,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<div id="masthead-inner" data-stellar-background-ratio="0.75">
+		<div id="masthead-inner" data-stellar-background-ratio="0.35">
 
 			<div id="main_navigation_container" class="container">
 				<div class="row">

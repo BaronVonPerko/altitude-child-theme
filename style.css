@@ -28,3 +28,7 @@
 #main_navigation_container #site_navigation .menu li a {
   font-size: 24pt;
 }
+
+#masthead-inner {
+  background-size: cover !important;
+}

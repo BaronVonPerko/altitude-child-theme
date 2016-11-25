@@ -4,7 +4,7 @@
  *
  */
 ?>
-<?php the_category(true); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="article-container xs-col-12">
 
