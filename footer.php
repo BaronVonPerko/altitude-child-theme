@@ -22,6 +22,8 @@
 					<div id="copyright_text">
 						<?php _e('Copyright', 'altitude-child'); ?> &copy; <?php echo date('Y'); ?>
 						<span class="sep"> &middot; </span>
+						<?php _e('Chris Perko'); ?>
+						<span class="sep"> &middot; </span>
 						<?php _e('All Rights Reserved', 'altitude-child'); ?>
 					</div>
 				</div>
