@@ -10,6 +10,8 @@
 				<?php echo the_content(); ?>
 			</div>
 
+			<hr class="s-divider" />
+
 		<?php endwhile; // end of the loop. ?>
 	</div>
 </div>
