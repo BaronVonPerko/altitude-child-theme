@@ -32,3 +32,7 @@
 #masthead-inner {
   background-size: cover !important;
 }
+
+.post-title {
+  margin-bottom: 50px;
+}
