@@ -1,0 +1,10 @@
+{
+  "name": "altitude-child-theme",
+  "version": "1.0.0",
+  "author": "Chris Perko",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1"
+  }
+}
