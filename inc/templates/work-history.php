@@ -20,6 +20,8 @@
 					<p><?php echo the_content(); ?></p>
 				</div>
 				
+				<hr class="s-divider" />
+				
 			</div>
 			
 			<?php endwhile; // end of the loop. ?>
