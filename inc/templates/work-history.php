@@ -6,14 +6,22 @@
 	
 <?php else: ?>
 
-	<div class="xs-col-12 work-history">
+	<div class="work-history">
 		<div class="page-content">
 			<?php while( $query->have_posts() ) : $query->the_post(); ?>
 	
-	      <?php echo the_title(); ?>
-				<?php echo get_the_post_thumbnail(); ?>
-				<?php echo the_content(); ?>
-	
+			<div class="row">
+				
+				<div class="s-col-3">
+					<?php echo get_the_post_thumbnail(); ?>
+				</div>
+				<div class="s-col-9">
+					<h3><?php echo the_title(); ?></h3>
+					<p><?php echo the_content(); ?></p>
+				</div>
+				
+			</div>
+			
 			<?php endwhile; // end of the loop. ?>
 		</div>
 	</div>
