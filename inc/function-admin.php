@@ -28,10 +28,10 @@ function altitude_child_enable_portfolio() {
   echo '<input type="checkbox" value="1" name="altitude-child-enable-portfolio" '.$checked.' />';
   if( $checked ) {
     ?>
-    <p>
-      Use this <strong>shortcode</strong> to activate the portfolio inside a Page or Post
-    </p>
-    <code>[display_portfolio]</code>
+      <p>
+        Use this <strong>shortcode</strong> to activate the portfolio inside a Page or Post
+      </p>
+      <code>[display_portfolio]</code>
     <?php
   }
  }
