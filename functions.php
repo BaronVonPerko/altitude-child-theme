@@ -22,7 +22,11 @@ function latte_child_enqueue_styles() {
 }
 
 
-
+/*
+ * The parent theme has an ugly banner on the Themes page
+ * that asks the user to upgrade to a paid version.  This
+ * removes that banner.
+ */
 add_action( 'wp_loaded', 'remove_upgrade_callout' );
 function remove_upgrade_callout() {
     remove_action( 'admin_notices', 'my_admin_notice' );
