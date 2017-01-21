@@ -36,3 +36,11 @@
 .post-title {
   margin-bottom: 50px;
 }
+
+/* Fix hidden child comments */
+.children {
+	display: block;
+	position: inherit;
+	background-color: #fff;
+	margin-left: 30px !important;
+}
