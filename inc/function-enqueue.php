@@ -25,3 +25,13 @@ wp_register_style(  'altitude-child-work-history',
                     '1.0.0',
                     'all' );
 wp_enqueue_style( 'altitude-child-work-history' );
+
+
+
+// Content Styles
+wp_register_style(  'altitude-child-content',
+                    get_stylesheet_directory_uri() . '/inc/css/content.css',
+                    array(),
+                    '1.0.0',
+                    'all' );
+wp_enqueue_style( 'altitude-child-content' );

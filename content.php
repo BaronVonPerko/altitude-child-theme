@@ -6,7 +6,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="article-container xs-col-12">
+	<div class="article-container">
 
 		<header class="entry-header">
 			<div class="entry-date"><?php altitude_posted_on(); ?></div>

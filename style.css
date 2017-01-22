@@ -3,6 +3,11 @@
   Author: Chris Perko
   Template: altitude-lite
   Version: 0.1
+  
+  
+  This file is used for overriding the default style.css
+  that is found in the parent theme.  Any custom css added 
+  to this child theme will be found in inc/css.
 */
 
 /****************************************
