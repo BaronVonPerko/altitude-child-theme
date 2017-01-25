@@ -29,10 +29,10 @@
 			<?php if ( get_theme_mod( 'altitude_child_header_contact_enabled', false ) == 1 ): ?>
 			<div class="header-contact-section">
 				<div>
-					<?php echo get_theme_mod( 'altitude_child_header_contact_text', '' ); ?>
+					<?php echo get_theme_mod( 'altitude_child_header_contact_text' ); ?>
 				</div>
 				<div>
-					<?php echo get_theme_mod( 'altitude_child_header_contact_number', '' ); ?>
+					<?php echo get_theme_mod( 'altitude_child_header_contact_number' ); ?>
 				</div>
 			</div>
 			<?php endif; ?>
