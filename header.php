@@ -25,14 +25,18 @@
 
 		<div id="masthead-inner" data-stellar-background-ratio="0.35">
 			
+			<!-- HEADER Contact Me SECTION -->
+			<?php if ( get_theme_mod( 'altitude_child_header_contact_enabled', false ) == 1 ): ?>
 			<div class="header-contact-section">
 				<div>
-					<?php echo get_theme_mod( 'altitude_child_header_contact_text' ); ?>
+					<?php echo get_theme_mod( 'altitude_child_header_contact_text', '' ); ?>
 				</div>
 				<div>
-					<?php echo get_theme_mod( 'altitude_child_header_contact_number' ); ?>
+					<?php echo get_theme_mod( 'altitude_child_header_contact_number', '' ); ?>
 				</div>
 			</div>
+			<?php endif; ?>
+			<!-- END HEADER Contact Me SECTION -->
 
 			<div id="main_navigation_container" class="container">
 				<div class="row">

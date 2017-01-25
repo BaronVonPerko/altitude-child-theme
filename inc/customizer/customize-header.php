@@ -9,6 +9,24 @@ function altitude_child_add_header_section( $wp_customize ) {
         'description'   => 'Customize the Contact Me section in the header.'
     ) );
     
+    $wp_customize->add_setting( 'altitude_child_header_contact_enabled', array(
+            'default'   => false,
+            'transport' => 'refresh'
+        )
+    );
+    
+    $wp_customize->add_control( new WP_Customize_Control (
+            $wp_customize,
+            'altitude_child_header_contact_enabled',
+            array (
+                'label'     => __( 'Enabled', 'altitude_child' ),
+                'section'   => 'altitude_child_custom_header',
+                'settings'  => 'altitude_child_header_contact_enabled',
+                'type'      => 'checkbox'
+            )
+        )
+    );
+    
     $wp_customize->add_setting( 'altitude_child_header_contact_text', array(
             'default'   => 'Contact Me',
             'transport' => 'refresh'
