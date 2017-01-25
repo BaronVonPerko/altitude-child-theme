@@ -35,3 +35,13 @@ wp_register_style(  'altitude-child-content',
                     '1.0.0',
                     'all' );
 wp_enqueue_style( 'altitude-child-content' );
+
+
+
+// Header Styles
+wp_register_style(  'altitude-child-header',
+                    get_stylesheet_directory_uri() . '/inc/css/header.css',
+                    array(),
+                    '1.0.0',
+                    'all' );
+wp_enqueue_style( 'altitude-child-header' );

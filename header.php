@@ -24,6 +24,15 @@
 	<header id="masthead" class="site-header" role="banner">
 
 		<div id="masthead-inner" data-stellar-background-ratio="0.35">
+			
+			<div class="header-contact-section">
+				<div>
+					<?php echo get_theme_mod( 'altitude_child_header_contact_text' ); ?>
+				</div>
+				<div>
+					<?php echo get_theme_mod( 'altitude_child_header_contact_number' ); ?>
+				</div>
+			</div>
 
 			<div id="main_navigation_container" class="container">
 				<div class="row">
@@ -36,6 +45,7 @@
 							</a>
 						</div>-->
 						<!-- #site-logo -->
+						
 
 						<nav id="site_navigation" class="xs-col-12 m-col-8" role="navigation">
 							<div id="xs_menu_button" class="s-show">

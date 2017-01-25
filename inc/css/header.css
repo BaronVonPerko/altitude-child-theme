@@ -1,0 +1,14 @@
+.header-contact-section {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18pt;
+    z-index: 999;
+}
+
+@media (max-width: 1590px) {
+    .header-contact-section {
+        left: 150px;
+    }
+}
