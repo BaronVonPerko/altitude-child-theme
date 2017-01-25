@@ -1,7 +1,8 @@
 var gulp        = require("gulp"),
     browserSync = require("browser-sync"),
     concatCss   = require("gulp-concat-css"),
-    cleanCss    = require("gulp-clean-css");
+    cleanCss    = require("gulp-clean-css"),
+    del         = require("del");
     
     
 gulp.task('sync', function() {
@@ -14,13 +15,21 @@ gulp.task('sync', function() {
     });
 });
 
-
 gulp.task('css', function() {
     gulp.src('inc/**/*.css')
         .pipe(concatCss('custom.css'))
         .pipe(gulp.dest('inc/css/'));
 
     return gulp.src('inc/css/custom.css')
-        .pipe(cleanCss({compatibility: 'ie8'}))
+        .pipe(cleanCss({compatibility: 'ie8'}, function() {
+            clean();
+        }))
         .pipe(gulp.dest('dist'));
 });
+
+
+function clean() {
+    setTimeout(function() {
+        return del(['inc/css/custom.css']);
+    }, 1000);
+};
