@@ -19,3 +19,8 @@
     padding: 10px;
     font-size: 16pt;
 }
+
+.message-sent {
+    text-align: center;
+    display: none;
+}

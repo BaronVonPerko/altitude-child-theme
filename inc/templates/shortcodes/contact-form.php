@@ -16,4 +16,8 @@
         <button type="submit" class="btn btn-default ac-button">Submit</button>
     </div>
 
+    <div class="message-sent">
+        <h1>Your message has been sent.</h1>
+    </div>
+
 </form>

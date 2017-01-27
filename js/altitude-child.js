@@ -29,6 +29,8 @@ jQuery(document).ready(function($) {
             },
             success: function(res) {
                 console.log(res);
+                form.find('.message-sent').show();
+                form.find('.form-group').hide();
             }
         })        
     });
