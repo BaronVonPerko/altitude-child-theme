@@ -60,10 +60,42 @@ function altitude_child_settings() {
 /*
  * Setup the Child Theme administration settings page
  */
+
+function altitude_child_admin_settings() {
+  add_menu_page( 'Altitude Child Options', 'Altitude Child Settings', 'manage_options', 'altitude-child', 'altitude_child_get_admin_settings', null, 99 );
+
+  add_submenu_page( 'altitude-child', 'Contact Form', 'Contact Form', 'manage_options', 'altitude-child-contact-page', 'altitude_child_contact_page' );
+}
+add_action( 'admin_menu', 'altitude_child_admin_settings' );
+
+function altitude_child_contact_page() {
+  require_once( get_stylesheet_directory() . '/inc/templates/admin-contact-form.php');
+}
+
 function altitude_child_get_admin_settings() {
   require_once( get_stylesheet_directory() . '/inc/templates/admin-settings.php' );
 }
-function altitude_child_admin_settings() {
-  add_menu_page( 'altitude-child Options', 'Altitude Child Settings', 'manage_options', 'altitude-child', 'altitude_child_get_admin_settings', null, 99 );
+
+
+
+/*
+ * Contact Form Options
+ */
+function altitude_child_contact_settings() {
+  register_setting( 'altitude-child-contact-options', 'activate_contact_form' );
+
+  add_settings_section( 'altitude-child-contact-section', 'Contact Form', 'altitude_child_contact', 'altitude_child_contact' );
+
+  add_settings_field( 'activate-form', 'Activate Contact Form', 'altitude_child_activate_contact', 'altitude_child_contact', 'altitude-child-contact-section' );
 }
-add_action( 'admin_menu', 'altitude_child_admin_settings' );
+add_action( 'admin_init', 'altitude_child_contact_settings' );
+
+function altitude_child_contact() {
+  echo 'Activate and Deactivate the Built-in Contact Form';
+}
+
+function altitude_child_activate_contact() {
+  $enableContactForm = get_option( 'activate_contact_form' );
+  $checked = @$enableContactForm == 1 ? 'checked' : '';
+  echo '<input type="checkbox" value="1" name="activate_contact_form" '.$checked.' />';
+}
