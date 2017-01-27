@@ -18,7 +18,7 @@ function altitude_child_display_portfolio( $atts, $content = null ) {
   );
 
   ob_start();
-  include 'templates/portfolio.php';
+  include 'templates/shortcodes/portfolio.php';
   return ob_get_clean();
 }
 add_shortcode( 'display_portfolio', 'altitude_child_display_portfolio' );
@@ -34,7 +34,7 @@ function altitude_child_display_work_items( $atts, $content = null ) {
   );
 
   ob_start();
-  include 'templates/work-history.php';
+  include 'templates/shortcodes/work-history.php';
   return ob_get_clean();
 }
 add_shortcode( 'display_work_items', 'altitude_child_display_work_items' );
