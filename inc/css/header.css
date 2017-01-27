@@ -10,5 +10,6 @@
 @media (max-width: 1590px) {
     .header-contact-section {
         left: 150px;
+        text-align: center;
     }
 }
