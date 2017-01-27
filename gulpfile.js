@@ -6,7 +6,7 @@ var gulp        = require("gulp"),
     
     
 gulp.task('sync', ['css'], function() {
-    var files = ['**/*.css', '**/**.php'];
+    var files = ['**/*.css', '**/**.php', '**/**.js'];
     
     browserSync.init(files, {
         proxy: 'http://localhost/wordpress', // WAMP local only
