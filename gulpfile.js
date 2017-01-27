@@ -5,15 +5,20 @@ var gulp        = require("gulp"),
     del         = require("del");
     
     
-gulp.task('sync', function() {
+gulp.task('sync', ['css'], function() {
     var files = ['**/*.css', '**/**.php'];
     
     browserSync.init(files, {
+        proxy: 'http://localhost/wordpress', // WAMP local only
         port: 8082, // c9.io only
         injectChanges: true,
         notify: false
     });
+
+    gulp.watch('./inc/css/*.css', ['css']);
+    gulp.watch('./**/*.php').on('change', browserSync.reload);
 });
+
 
 gulp.task('css', function() {
     gulp.src('inc/**/*.css')
@@ -21,12 +26,10 @@ gulp.task('css', function() {
         .pipe(gulp.dest('inc/css/'));
 
     return gulp.src('inc/css/custom.css')
-        .pipe(cleanCss({compatibility: 'ie8'}, function() {
-            clean();
-        }))
-        .pipe(gulp.dest('dist'));
+        .pipe(cleanCss({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist'))
+        .pipe(browserSync.stream());
 });
-
 
 function clean() {
     setTimeout(function() {

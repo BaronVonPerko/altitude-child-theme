@@ -28,12 +28,19 @@
 			<!-- HEADER Contact Me SECTION -->
 			<?php if ( get_theme_mod( 'altitude_child_header_contact_enabled', false ) == 1 ): ?>
 			<div class="header-contact-section">
+
+				<?php if ( get_theme_mod( 'altitude_child_header_contact_text' ) != '' ): ?>
 				<div>
 					<?php echo get_theme_mod( 'altitude_child_header_contact_text' ); ?>
 				</div>
+				<?php endif; ?>
+
+				<?php if ( get_theme_mod( 'altitude_child_header_contact_number' ) != '' ): ?>
 				<div>
 					<?php echo get_theme_mod( 'altitude_child_header_contact_number' ); ?>
 				</div>
+				<?php endif; ?>
+				
 			</div>
 			<?php endif; ?>
 			<!-- END HEADER Contact Me SECTION -->
