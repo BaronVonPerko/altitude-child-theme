@@ -9,6 +9,10 @@
     </div>
 
     <div class="form-group">
+        <input type="tel" class="form-control" placeholder="Your Phone Number" id="phone" name="phone" />
+    </div>
+
+    <div class="form-group">
         <textarea name="message" id="message" class="form-control" required="required" placeholder="Your Message"></textarea>
     </div>
 

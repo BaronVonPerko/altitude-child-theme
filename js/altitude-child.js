@@ -8,6 +8,7 @@ jQuery(document).ready(function($) {
 
         var name    = form.find('#name').val(),
             email   = form.find('#email').val(),
+            phone   = form.find('#phone').val(),
             message = form.find('#message').val(),
             ajaxUrl = form.data('url');
 
@@ -21,6 +22,7 @@ jQuery(document).ready(function($) {
             data: {
                 name: name,
                 email: email,
+                phone: phone,
                 message: message,
                 action: 'altitude_child_save_contact_form'
             },
