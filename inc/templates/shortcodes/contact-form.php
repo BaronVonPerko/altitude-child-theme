@@ -17,7 +17,8 @@
     </div>
 
     <div class="message-sent">
-        <h1>Your message has been sent.</h1>
+        <h2>Your message has been sent.</h2>
+        <h4>I will be in touch with you soon!</h4>
     </div>
 
 </form>

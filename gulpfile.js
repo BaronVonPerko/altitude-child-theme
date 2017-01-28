@@ -9,7 +9,7 @@ gulp.task('sync', ['css'], function() {
     var files = ['**/*.css', '**/**.php', '**/**.js'];
     
     browserSync.init(files, {
-        proxy: 'http://localhost/wordpress', // WAMP local only
+        proxy: 'http://localhost/chrisperko', // WAMP local only
         port: 8082, // c9.io only
         injectChanges: true,
         notify: false
