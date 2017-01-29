@@ -127,6 +127,13 @@
 						<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 
 						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+
+						<div class="social-icons">
+							<?php if( get_theme_mod( 'altitude_child_twitter_handle' ) ): ?>
+								<?php $twitterHandle = get_theme_mod( 'altitude_child_twitter_handle' ); ?>
+								<?php echo '<a href="http://www.twitter.com/'.$twitterHandle.'" target="_blank">Twitter</a>'; ?>
+							<?php endif; ?>
+						</div>
 					</div>
 					<?php if ( is_front_page() ) : ?>
 						<div class="button">
