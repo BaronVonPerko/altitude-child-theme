@@ -26,8 +26,12 @@
     </div>
 
     <div class="message-sent">
-        <h2>Your message has been sent.</h2>
-        <h4>I will be in touch with you soon!</h4>
+        <?php
+            $message1 = esc_attr( get_option( 'success_message_1', 'Your message has been sent.' ) );
+            $message2 = esc_attr( get_option( 'success_message_2', 'I will be in touch with you soon!' ) );
+        ?>
+        <h2><?php echo $message1; ?></h2>
+        <h4><?php echo $message2; ?></h4>
     </div>
 
 </form>
