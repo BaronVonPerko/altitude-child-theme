@@ -12,6 +12,7 @@ require get_stylesheet_directory() . '/inc/function-custom-post-type.php';
 require get_stylesheet_directory() . '/inc/function-enqueue.php';
 require get_stylesheet_directory() . '/inc/shortcodes.php';
 require get_stylesheet_directory() . '/inc/customizer/customize-header.php';
+require get_stylesheet_directory() . '/inc/customizer/customize-social-media.php';
 require get_stylesheet_directory() . '/inc/ajax.php';
 
 
