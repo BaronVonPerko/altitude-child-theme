@@ -99,6 +99,10 @@ function altitude_child_create_contact_form_post_type() {
     'menu_position'   => 28,
     'menu_icon'       => 'dashicons-email-alt',
     'supports'        => array( 'title', 'editor', 'author' ),
+    'capabilities'    => array(
+      'create_posts'  => false
+    ),
+    'map_meta_cap'    => true,
   );
 
   register_post_type( 'ac-contact-page', $args );
