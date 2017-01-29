@@ -83,10 +83,12 @@ function altitude_child_get_admin_settings() {
  */
 function altitude_child_contact_settings() {
   register_setting( 'altitude-child-contact-options', 'activate_contact_form' );
+  register_setting( 'altitude-child-contact-options', 'require_phone' );
 
   add_settings_section( 'altitude-child-contact-section', 'Contact Form', 'altitude_child_contact', 'altitude_child_contact' );
 
   add_settings_field( 'activate-form', 'Activate Contact Form', 'altitude_child_activate_contact', 'altitude_child_contact', 'altitude-child-contact-section' );
+  add_settings_field( 'require-phone', 'Require Phone Number', 'altitude_child_require_phone', 'altitude_child_contact', 'altitude-child-contact-section' );
 }
 add_action( 'admin_init', 'altitude_child_contact_settings' );
 
@@ -98,4 +100,13 @@ function altitude_child_activate_contact() {
   $enableContactForm = get_option( 'activate_contact_form' );
   $checked = @$enableContactForm == 1 ? 'checked' : '';
   echo '<input type="checkbox" value="1" name="activate_contact_form" '.$checked.' />';
+}
+
+function altitude_child_require_phone() {
+  $enableContactForm = get_option( 'activate_contact_form' );
+  $disabled = @$enableContactForm == 1 ? '' : 'disabled';
+
+  $phoneRequired = get_option( 'require_phone' );
+  $checked = @$phoneRequired == 1 ? 'checked' : '';
+  echo '<input type="checkbox" value="1" name="require_phone" '.$disabled.' '.$checked.' />';
 }

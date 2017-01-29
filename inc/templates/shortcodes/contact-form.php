@@ -9,7 +9,12 @@
     </div>
 
     <div class="form-group">
-        <input type="tel" class="form-control" placeholder="Your Phone Number" id="phone" name="phone" />
+        <?php 
+            $phoneRequired = get_option( 'require_phone' );
+            $message = @$phoneRequired == 1 ? '' : '(Optional)';
+            $required = @$phoneRequired == 1 ? 'required' : '';
+        ?>
+        <input type="tel" class="form-control" placeholder="Your Phone Number <?php echo $message; ?>" id="phone" name="phone" <?php echo $required; ?> />
     </div>
 
     <div class="form-group">
