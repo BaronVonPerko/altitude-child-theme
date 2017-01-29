@@ -130,8 +130,10 @@
 
 						<div class="social-icons">
 							<?php if( get_theme_mod( 'altitude_child_twitter_handle' ) ): ?>
-								<?php $twitterHandle = get_theme_mod( 'altitude_child_twitter_handle' ); ?>
-								<?php echo '<a href="http://www.twitter.com/'.$twitterHandle.'" target="_blank">Twitter</a>'; ?>
+								<?php $twitterUrl = "http://www.twitter.com/" . get_theme_mod( 'altitude_child_twitter_handle' ); ?>
+								<a href="<?php echo $twitterUrl; ?>" target="_blank">
+									<span class="dashicons dashicons-twitter"></span>
+								</a>
 							<?php endif; ?>
 						</div>
 					</div>
