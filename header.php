@@ -129,12 +129,23 @@
 						<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 
 						<div class="social-icons">
+							
+							<!-- Twitter -->
 							<?php if( get_theme_mod( 'altitude_child_twitter_handle' ) ): ?>
 								<?php $twitterUrl = "http://www.twitter.com/" . get_theme_mod( 'altitude_child_twitter_handle' ); ?>
 								<a href="<?php echo $twitterUrl; ?>" target="_blank">
 									<span class="dashicons dashicons-twitter"></span>
 								</a>
 							<?php endif; ?>
+
+							<!-- Facebook -->
+							<?php if( get_theme_mod( 'altitude_child_facebook_id' ) ): ?>
+								<?php $fbUrl = "https://www.facebook.com/profile.php?id=" . get_theme_mod( 'altitude_child_facebook_id' ); ?>
+								<a href="<?php echo $fbUrl; ?>" target="_blank">
+									<span class="dashicons dashicons-facebook-alt"></span>
+								</a>
+							<?php endif; ?>
+
 						</div>
 					</div>
 					<?php if ( is_front_page() ) : ?>
