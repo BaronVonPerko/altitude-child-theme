@@ -13,3 +13,23 @@
         text-align: center;
     }
 }
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons span.dashicons {
+    font-size: 26pt;
+    text-align: center;
+    margin: 10px 35px 10px -15px;
+    color: rgba(255, 255, 255, 0.4);
+    transition: color 250ms ease-in-out;
+}
+
+.social-icons span.dashicons:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.social-icons a:hover {
+    text-decoration: none;
+}

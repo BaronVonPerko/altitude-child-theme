@@ -23,16 +23,10 @@ gulp.task('sync', ['css'], function() {
 gulp.task('css', function() {
     gulp.src('inc/**/*.css')
         .pipe(concatCss('custom.css'))
-        .pipe(gulp.dest('inc/css/'));
+        .pipe(gulp.dest('dist/'));
 
-    return gulp.src('inc/css/custom.css')
+    return gulp.src('dist/custom.css')
         .pipe(cleanCss({compatibility: 'ie8'}))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('dist/minified'))
         .pipe(browserSync.stream());
 });
-
-function clean() {
-    setTimeout(function() {
-        return del(['inc/css/custom.css']);
-    }, 1000);
-};
