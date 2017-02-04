@@ -16,11 +16,10 @@
 
 @media (max-width: 767px) {
     .header-contact-section {
-        left: auto;
-        width: 100%;
+        text-align: left;
+        left: 10px;
     }
 }
-
 .social-icons {
     text-align: center;
 }
